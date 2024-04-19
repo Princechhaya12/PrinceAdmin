@@ -1,0 +1,29 @@
+﻿.TextBox {
+    width: 95%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    margin-left: 50px;
+    color: white;
+    background: #2e2e2e;
+    /*background: black;*/
+    border: 1px solid black;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.button {
+    width: 15%;
+    background-color: #18A7B5;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    margin-left: 50px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+    .button:hover {
+        background-color: #18A7B5;
+    }

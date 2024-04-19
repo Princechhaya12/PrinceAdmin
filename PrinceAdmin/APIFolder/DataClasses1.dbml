@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="PrinceAdminDB" Class="DataClasses1DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Table Name="dbo.Register" Member="Registers">
+    <Type Name="Register">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Firstname" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Lastname" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Emailid" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Phone" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="City" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Reels" Member="Reels">
+    <Type Name="Reel">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Uprofile" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Video" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Tags" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Hastage" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Creater" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Nmessage" Member="Nmessages">
+    <Type Name="Nmessage">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Messagetitle" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Message" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Coins" Member="Coins">
+    <Type Name="Coin">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Rupees" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="coins" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Function Name="dbo.InsertCoins" Method="InsertCoins">
+    <Parameter Name="Rupees" Parameter="rupees" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="Coins" Parameter="coins" Type="System.String" DbType="VarChar(100)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.UserRegistration" Method="UserRegistration">
+    <Parameter Name="Firstname" Parameter="firstname" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="Lastname" Parameter="lastname" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="Emailid" Parameter="emailid" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="Phone" Parameter="phone" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="City" Parameter="city" Type="System.String" DbType="VarChar(100)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.Loginproc" Method="Loginproc">
+    <Parameter Name="Phone" Parameter="phone" Type="System.String" DbType="VarChar(100)" />
+    <ElementType Name="LoginprocResult">
+      <Column Name="" Member="Column1" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.InsertReels" Method="InsertReels">
+    <Parameter Name="Uprofile" Parameter="uprofile" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="Video" Parameter="video" Type="System.String" DbType="VarChar(MAX)" />
+    <Parameter Name="Tags" Parameter="tags" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="Hashtags" Parameter="hashtags" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="Description" Parameter="description" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="Creator" Parameter="creator" Type="System.String" DbType="VarChar(100)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.InsertNmessage" Method="InsertNmessage">
+    <Parameter Name="Messagetitle" Parameter="messagetitle" Type="System.String" DbType="VarChar(MAX)" />
+    <Parameter Name="Message" Parameter="message" Type="System.String" DbType="VarChar(MAX)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.EditRegister" Method="EditRegister">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Firstname" Parameter="firstname" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="Lastname" Parameter="lastname" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="Emailid" Parameter="emailid" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="Phone" Parameter="phone" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="City" Parameter="city" Type="System.String" DbType="VarChar(100)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.EditReels" Method="EditReels">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Uprofile" Parameter="uprofile" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="Video" Parameter="video" Type="System.String" DbType="VarChar(MAX)" />
+    <Parameter Name="Tags" Parameter="tags" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="Hashtags" Parameter="hashtags" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="Description" Parameter="description" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="Creator" Parameter="creator" Type="System.String" DbType="VarChar(100)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.GetRegisterById" Method="GetRegisterById">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <ElementType Name="GetRegisterByIdResult">
+      <Column Name="Firstname" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Lastname" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Emailid" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Phone" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="City" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.DeleteReels" Method="DeleteReels">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.Deleteregistration" Method="Deleteregistration">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.DeleteMessage" Method="DeleteMessage">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.UpdateCoins" Method="UpdateCoins">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Rupees" Parameter="rupees" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="Coins" Parameter="coins" Type="System.String" DbType="VarChar(100)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.DeleteCoins" Method="DeleteCoins">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.DeleteBankDetails" Method="DeleteBankDetails">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.GetBankDetailsById" Method="GetBankDetailsById">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <ElementType Name="GetBankDetailsByIdResult">
+      <Column Name="Holdername" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="AccountNo" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Branch" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="IFSC" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="city" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="BankName" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="DOB" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.UpdateBankDetails" Method="UpdateBankDetails">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Holdername" Parameter="holdername" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="AccountNo" Parameter="accountNo" Type="System.String" DbType="VarChar(200)" />
+    <Parameter Name="Branch" Parameter="branch" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="IFSC" Parameter="iFSC" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="City" Parameter="city" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="BankName" Parameter="bankName" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="DOB" Parameter="dOB" Type="System.String" DbType="VarChar(100)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.InsertBankDetails" Method="InsertBankDetails">
+    <Parameter Name="Holdername" Parameter="holdername" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="AccountNo" Parameter="accountNo" Type="System.String" DbType="VarChar(200)" />
+    <Parameter Name="Branch" Parameter="branch" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="IFSC" Parameter="iFSC" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="City" Parameter="city" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="BankName" Parameter="bankName" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="DOB" Parameter="dOB" Type="System.String" DbType="VarChar(100)" />
+    <Return Type="System.Int32" />
+  </Function>
+</Database>

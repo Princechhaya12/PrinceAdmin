@@ -1,0 +1,92 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="PrinceAdmin.Panel.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+     <link rel="stylesheet" href="Main.css">
+    <meta name="viewport" content="width=device-width, initial-scale=0.9">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <title>PrinceAdmin - Admin Panel</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+            <div>
+               <div>
+
+        <nav class="sidebar">
+    
+    <div class="menu-bar">
+        <div class="menu">
+            <ul class="menu-links">
+                <li class="nav-link">
+                    <a href="Dashboard.aspx">
+                        <i class='bx bx-home-alt icon' ></i>
+                        <span class="text nav-text">Dashboard</span>
+                    </a>
+                </li>
+
+                <li class="nav-link">
+                    <a href="Users.aspx">
+                        <i class='bx bx-user icon' ></i>
+                        <span class="text nav-text">Users</span>
+                    </a>
+                </li>
+
+
+                <li class="nav-link">
+                    <a href="Addmessage.aspx">
+                        <i class='bx bx-chart icon' ></i>
+                        <span class="text nav-text">Add Message</span>
+                    </a>
+                </li>
+
+                 <li class="nav-link">
+                    <a href="Coins.aspx">
+                        <i class='bx bx-chart icon' ></i>
+                        <span class="text nav-text">Coins Managment</span>
+                    </a>
+                </li>
+
+                  <li class="nav-link">
+                    <a href="Reels.aspx">
+                        <i class='bx bx-chart icon' ></i>
+                        <span class="text nav-text">Reels</span>
+                    </a>
+                </li>
+
+               <%--   <li class="nav-link">
+                    <a href="Withdraw.aspx">
+                        <i class='bx bx-chart icon' ></i>
+                        <span class="text nav-text">Withdraw</span>
+                    </a>
+                </li>
+         
+                <li class="nav-link">
+                    <a href="WinProbability.aspx">
+                        <i class='bx bx-money icon' ></i>
+                        <span class="text nav-text">Probability</span>
+                    </a>
+                </li>--%>
+  
+             
+            </ul>
+        </div>
+
+
+       
+    </div>
+
+</nav>
+
+         <section class="home">
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+              </section>
+    </div>
+    </div>
+    </form>
+</body>
+</html>
